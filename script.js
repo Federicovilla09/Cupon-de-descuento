@@ -34,11 +34,7 @@ function calcularDescuento() {
     return;
   }
 
-  if (
-    cupon === "Bitch" ||
-    cupon === "Better call Saul" ||
-    cupon === "I am the danger"
-  ) {
+  if (cuponesDescuentos[cupon]) {
     let descuento = cuponesDescuentos[cupon];
     const totalConDescuento = (precio * (100 - descuento)) / 100;
     resultadoDescuento.innerHTML = `El precio final es de: $ ${totalConDescuento}`;
